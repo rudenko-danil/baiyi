@@ -9,7 +9,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Коммунальная техника Baiyi CQ в Казахстане — под ключ, с сервисом">
 <meta property="og:description" content="Подметально-моечные машины, мусоровозы, листосборники и водовозы от завода Baiyi CQ. Подберём технику под задачу и пришлём КП. Сервис в Алматы, лизинг через любой банк.">
-<meta property="og:image" content="/img/c12-street-wash.webp">
+<meta property="og:image" content="https://baiyi1.netlify.app/og-tehnika.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://baiyi1.netlify.app/">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/onest-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/unbounded-cyrillic-600-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -323,6 +328,31 @@ a{color:#15181B}a:hover{color:#4D545A}
 [data-cat]:not(.open) .card:nth-of-type(n+3){display:none !important}
 [data-cat].open .more-btn{display:none !important}
 }
+
+.mtile{position:relative;margin:0;box-sizing:border-box;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse 70% 62% at 50% 90%,#3B4147 0%,#2A2F34 55%,#22262A 100%);display:flex;align-items:flex-end;justify-content:center;padding:44px 18px 16px}
+.mtile.bleed-r{justify-content:flex-end;padding-right:0}
+.mtile img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.mtile figcaption{position:absolute;left:12px;top:12px;padding:6px 10px;border-radius:8px;background:rgba(21,24,27,.78);color:#F2F2EE;font-size:13px;font-weight:600;line-height:1.3}
+.more-btn{display:none;align-items:center;justify-content:center;gap:8px;padding:0 26px;align-self:flex-start}
+.t-m{display:none}
+[data-cat].open .more-btn{display:none !important}
+@media (min-width:761px){
+[data-cat]:not(.open) .card:nth-of-type(n+5){display:none !important}
+.more-btn.more-d{display:inline-flex}
+}
+@media (max-width:760px){
+.more-btn.more-m{display:flex}
+.more-btn{align-self:stretch}
+.t-d{display:none}.t-m{display:inline}
+.cap-d{display:none}
+.mtile{padding:34px 10px 10px}
+.mlist{gap:10px !important}
+.mrow{display:grid !important;grid-template-columns:44px minmax(0,1fr);column-gap:14px;row-gap:4px;padding:16px !important;align-items:start}
+.mrow > :first-child{grid-row:span 2;width:44px !important;height:44px !important;border-radius:12px !important}
+.mrow > :first-child svg{width:22px;height:22px}
+.mrow > :nth-child(2){font-size:16px !important;line-height:1.3 !important}
+.mrow > :nth-child(3){font-size:14px !important;line-height:1.45 !important}
+}
 </style>
 </head>
 <body>
@@ -454,9 +484,9 @@ a{color:#15181B}a:hover{color:#4D545A}
 <a href="#lead" data-open-form class="btn btn-y" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 28px; border-radius: 12px; background: #F2C200; color: #15181B; text-decoration: none; font-weight: 700; font-size: 17px">Подобрать технику <svg class="arr" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div style="flex: 1 1 520px; min-width: 0; position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 6px">
-<img loading="lazy" decoding="async" class="h-big" src="/img/x20-street.webp" alt="Водовоз BY-X20 с туманной пушкой прибивает пыль" style="grid-column: span 2; display: block; width: 100%; height: 310px; object-fit: cover; border-radius: 18px">
-<img loading="lazy" decoding="async" class="h-ph" src="/img/cs18000-road.webp" alt="Подметально-моечная машина BY-CS18000 убирает дорогу" style="display: block; width: 100%; height: 210px; object-fit: cover; border-radius: 18px">
-<img loading="lazy" decoding="async" class="h-ph" src="/img/x15-fog-cannon.webp" alt="Водовоз BY-X15 с туманной пушкой прибивает пыль" style="display: block; width: 100%; height: 210px; object-fit: cover; border-radius: 18px">
+<figure class="mtile h-big" style="grid-column: span 2; height: 310px"><img loading="lazy" decoding="async" src="/img/cut-x20.webp" alt="Водовоз BY-X20 с туманной пушкой"><figcaption>BY-X20<span class="cap-d"> · водовоз с туманной пушкой</span></figcaption></figure>
+<figure class="mtile h-ph bleed-r" style="height: 210px"><img loading="lazy" decoding="async" src="/img/cut-cs12000.webp" alt="Подметально-моечная машина BY-CS12000"><figcaption>BY-CS12000<span class="cap-d"> · подметально-моечная</span></figcaption></figure>
+<figure class="mtile h-ph" style="height: 210px"><img loading="lazy" decoding="async" src="/img/cut-x15.webp" alt="Трицикл-водовоз BY-X15 с туманной пушкой"><figcaption>BY-X15<span class="cap-d"> · туманная пушка</span></figcaption></figure>
 </div>
 </div>
 </div>
@@ -853,7 +883,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
-<button type="button" class="more-btn show-m" data-more>Показать ещё 6 моделей</button>
+<button type="button" class="more-btn more-d more-m" data-more><span class="t-d">Показать ещё 4 модели</span><span class="t-m">Показать ещё 6 моделей</span></button>
 </div>
 
 <div data-cat="garbage" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -969,7 +999,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
-<button type="button" class="more-btn show-m" data-more>Показать ещё 1 модель</button>
+<button type="button" class="more-btn more-m" data-more><span class="t-m">Показать ещё 1 модель</span></button>
 </div>
 
 <div data-cat="small" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1120,7 +1150,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
-<button type="button" class="more-btn show-m" data-more>Показать ещё 2 модели</button>
+<button type="button" class="more-btn more-m" data-more><span class="t-m">Показать ещё 2 модели</span></button>
 </div>
 
 <div data-cat="leaves" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1236,7 +1266,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
-<button type="button" class="more-btn show-m" data-more>Показать ещё 1 модель</button>
+<button type="button" class="more-btn more-m" data-more><span class="t-m">Показать ещё 1 модель</span></button>
 </div>
 
 <div data-cat="wash" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1457,7 +1487,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
-<button type="button" class="more-btn show-m" data-more>Показать ещё 4 модели</button>
+<button type="button" class="more-btn more-d more-m" data-more><span class="t-d">Показать ещё 2 модели</span><span class="t-m">Показать ещё 4 модели</span></button>
 </div>
 
 <div data-cat="water" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1564,23 +1594,23 @@ a{color:#15181B}a:hover{color:#4D545A}
 <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -0.015em">Техника из Китая — сервис в Казахстане</h2>
 <p style="margin: 0; font-size: 18px; color: #4D545A">Вам не придётся ждать ответа с завода и разбираться через переводчика. Обслуживание и ремонт — у нас.</p>
 </div>
-<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
+<div class="reveal mlist" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #15181B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2C200" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Гарантия</span>
 <span style="font-size: 15px; color: #4D545A">На всю технику, кроме расходных материалов. Ремонт по гарантии — за наш счёт.</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #15181B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2C200" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.7-.3-.3-2.7z"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Свой сервис в Алматы</span>
 <span style="font-size: 15px; color: #4D545A">Диагностика, ремонт и плановое обслуживание.</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #15181B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2C200" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 7v10l9 4 9-4V7"></path><path d="M12 11v10"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Запчасти на весь срок службы</span>
 <span style="font-size: 15px; color: #4D545A">Поставляем оригинальные запчасти завода. В период гарантии — бесплатно.</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #F2F2EE">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #15181B; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2C200" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M16 11l2 2 4-4"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Обучение операторов</span>
 <span style="font-size: 15px; color: #4D545A">Научим ваших сотрудников работать на технике и обслуживать её.</span>
@@ -1633,23 +1663,23 @@ a{color:#15181B}a:hover{color:#4D545A}
 <span style="display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6B5A00"><svg aria-hidden="true" width="34" height="10" viewBox="0 0 34 10"><path d="M1 9 C 12 9 16 1 33 1" stroke="#E2B600" stroke-width="3" fill="none" stroke-linecap="round"></path></svg>Почему электротехника</span>
 <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -0.015em">Электротехника обходится дешевле в работе</h2>
 </div>
-<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
+<div class="reveal mlist" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #F2C200; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15181B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 8h7"></path><path d="M8.5 11h7"></path><path d="M12 11v6.5"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Меньше расходов на топливо</span>
 <span style="font-size: 15px; color: #4D545A">Зарядка от сети стоит дешевле дизеля на тот же объём работы.</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #F2C200; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15181B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M3 12h3"></path><path d="M18 12h3"></path><path d="M5.6 5.6l2.1 2.1"></path><path d="M16.3 16.3l2.1 2.1"></path><path d="M5.6 18.4l2.1-2.1"></path><path d="M16.3 7.7l2.1-2.1"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Проще обслуживание</span>
 <span style="font-size: 15px; color: #4D545A">Нет двигателя внутреннего сгорания: не нужно менять масло, фильтры и ремни.</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #F2C200; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15181B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Тихо и без выхлопа</span>
 <span style="font-size: 15px; color: #4D545A">Можно убирать ночью и рано утром, рядом с домами, школами и больницами.</span>
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
+<div class="mrow" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: #FFFFFF; border: 1px solid #E2E2DA">
 <span style="width: 52px; height: 52px; border-radius: 14px; background: #F2C200; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15181B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></span>
 <span style="font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 19px">Быстрая зарядка</span>
 <span style="font-size: 15px; color: #4D545A">Часть моделей заряжается за 2–3 часа, рабочая смена — 4–8 часов в зависимости от модели.</span>
@@ -1859,7 +1889,7 @@ a{color:#15181B}a:hover{color:#4D545A}
     var f = dlg.querySelector('form');
     ['task','brand','need'].forEach(function(k){
       var v = el.getAttribute('data-' + k);
-      if (v !== null && f.elements[k]) f.elements[k].value = v;
+      if (f.elements[k]) f.elements[k].value = v !== null ? v : '';
     });
     if (f.elements.model) {
       var m = el.getAttribute('data-model') || '';
@@ -1878,7 +1908,7 @@ a{color:#15181B}a:hover{color:#4D545A}
   var cats = [].slice.call(document.querySelectorAll('[data-cat]'));
   function setTab(id){
     tabs.forEach(function(t){ t.setAttribute('aria-selected', t.getAttribute('data-tab') === id ? 'true' : 'false'); });
-    cats.forEach(function(c){ c.hidden = !(id === 'all' || c.getAttribute('data-cat') === id); });
+    cats.forEach(function(c){ c.hidden = !(id === 'all' || c.getAttribute('data-cat') === id); if (id !== 'all' && c.getAttribute('data-cat') === id) c.classList.add('open'); });
   }
   tabs.forEach(function(t){ t.addEventListener('click', function(){ setTab(t.getAttribute('data-tab')); }); });
   [].slice.call(document.querySelectorAll('[data-pick]')).forEach(function(a){
