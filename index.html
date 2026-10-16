@@ -309,6 +309,20 @@ a{color:#15181B}a:hover{color:#4D545A}
 .lead-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media (max-width:760px){.lead-box{padding:28px 20px 24px}.lead-2{grid-template-columns:minmax(0,1fr)}}
+
+.show-m{display:none !important}
+.nav-x{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 14px;border-radius:999px;background:rgba(242,194,0,.14);border:1.5px solid rgba(242,194,0,.55);color:#F2C200 !important;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap;transition:background-color .2s ease}
+.nav-x:hover{background:rgba(242,194,0,.26)}
+.fab{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:#F2C200;color:#15181B;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.35);z-index:50}
+.swipe-hint{align-items:center;gap:8px;margin:-4px 0 0;font-size:14px;color:#4D545A}
+.more-btn{min-height:50px;border-radius:10px;border:1.5px solid #15181B;background:transparent;font:inherit;font-size:15px;font-weight:700;color:#15181B;cursor:pointer}
+@media (max-width:760px){
+.show-m{display:flex !important}
+.hero-sub{font-size:15px !important}
+.hero-in{gap:20px !important}
+[data-cat]:not(.open) .card:nth-of-type(n+3){display:none !important}
+[data-cat].open .more-btn{display:none !important}
+}
 </style>
 </head>
 <body>
@@ -328,14 +342,16 @@ a{color:#15181B}a:hover{color:#4D545A}
 <span style="font-size: 13px; color: #AEB5BB">Официальный представитель Baiyi CQ</span>
 </div>
 </div>
-<nav class="nav" aria-label="Разделы" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 15px">
+<nav class="nav" aria-label="Разделы" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px 18px; font-size: 14px; white-space: nowrap">
 <a href="#catalog" style="color: #E4E7EA; text-decoration: none">Каталог</a>
 <a href="#service" style="color: #E4E7EA; text-decoration: none">Сервис</a>
 <a href="#turnkey" style="color: #E4E7EA; text-decoration: none">Под ключ</a>
 <a href="#leasing" style="color: #E4E7EA; text-decoration: none">Лизинг</a>
 <a href="#faq" style="color: #E4E7EA; text-decoration: none">Вопросы</a>
+<a href="/zapchasti/" class="nav-x">Запчасти <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 </nav>
-<div style="display: flex; align-items: center; gap: 16px; flex: 0 0 auto">
+<div style="display: flex; align-items: center; gap: 12px; flex: 0 0 auto">
+<a href="/zapchasti/" class="nav-x show-m">Запчасти <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 <a href="tel:+77077064669" aria-label="Позвонить: +7 707 706 4669" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #F2F2EE; text-decoration: none; font-weight: 600">
 <span style="width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.1); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span>
 <span class="hide-m">+7 707 706 4669</span></a>
@@ -344,11 +360,11 @@ a{color:#15181B}a:hover{color:#4D545A}
 </header>
 
 <div class="hero-in" style="display: flex; flex-direction: column; justify-content: center; gap: 28px; max-width: 720px; min-height: 460px; padding: 88px 0 72px">
-<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgba(242,194,0,0.14); color: #F2C200; font-size: 14px; font-weight: 600">
+<span class="hide-m" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgba(242,194,0,0.14); color: #F2C200; font-size: 14px; font-weight: 600">
 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
 Официальный представитель завода Baiyi CQ в Казахстане</span>
 <h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(28px, 2.9vw, 44px); line-height: 1.14; letter-spacing: -0.01em">Коммунальная техника от завода — под ключ и с сервисом в Казахстане</h1>
-<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #D2D7DB; max-width: 600px">Подметальные и моечные машины, мусоровозы, листосборники и водовозы. 28 моделей: от ручного листосборника до 18-тонного мусоровоза. Подберём технику под вашу задачу и пришлём КП.</p>
+<p class="hero-sub" style="margin: 0; font-size: 17px; line-height: 1.55; color: #C9CED2; max-width: 560px">Подметальные и моечные машины, мусоровозы, листосборники и водовозы. 28 моделей: от ручного листосборника до 18-тонного мусоровоза. Подберём технику под вашу задачу и пришлём КП.</p>
 <a href="#lead" data-open-form class="btn btn-y" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 30px; border-radius: 12px; background: #F2C200; color: #15181B; text-decoration: none; font-weight: 700; font-size: 17px">Подобрать технику
 <svg class="arr" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 </div>
@@ -438,13 +454,9 @@ a{color:#15181B}a:hover{color:#4D545A}
 <a href="#lead" data-open-form class="btn btn-y" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 28px; border-radius: 12px; background: #F2C200; color: #15181B; text-decoration: none; font-weight: 700; font-size: 17px">Подобрать технику <svg class="arr" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div style="flex: 1 1 520px; min-width: 0; position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 6px">
-<img loading="lazy" decoding="async" class="h-big" src="/img/quarry.webp" alt="Карьерный самосвал на пыльной дороге" style="grid-column: span 2; display: block; width: 100%; height: 310px; object-fit: cover; border-radius: 18px">
-<img loading="lazy" decoding="async" class="h-ph" src="/img/excavator.webp" alt="Экскаватор грузит грунт в самосвал на стройплощадке" style="display: block; width: 100%; height: 210px; object-fit: cover; border-radius: 18px">
+<img loading="lazy" decoding="async" class="h-big" src="/img/x20-street.webp" alt="Водовоз BY-X20 с туманной пушкой прибивает пыль" style="grid-column: span 2; display: block; width: 100%; height: 310px; object-fit: cover; border-radius: 18px">
+<img loading="lazy" decoding="async" class="h-ph" src="/img/cs18000-road.webp" alt="Подметально-моечная машина BY-CS18000 убирает дорогу" style="display: block; width: 100%; height: 210px; object-fit: cover; border-radius: 18px">
 <img loading="lazy" decoding="async" class="h-ph" src="/img/x15-fog-cannon.webp" alt="Водовоз BY-X15 с туманной пушкой прибивает пыль" style="display: block; width: 100%; height: 210px; object-fit: cover; border-radius: 18px">
-<div style="position: absolute; right: 22px; bottom: 22px; display: flex; flex-direction: column; padding: 12px 16px; border-radius: 12px; background: #F2C200; color: #15181B; line-height: 1.2">
-<span style="font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 22px">до 15 м</span>
-<span style="font-size: 13px; font-weight: 600">дальность туманной пушки</span>
-</div>
 </div>
 </div>
 </div>
@@ -469,6 +481,8 @@ a{color:#15181B}a:hover{color:#4D545A}
 <button type="button" role="tab" class="tab" aria-selected="false" data-tab="wash"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h8v5H3z"></path><path d="M11 10.5h3"></path><path d="M17 7.5l3-1.5"></path><path d="M17 10.5h4"></path><path d="M17 13.5l3 1.5"></path><path d="M6 13v6"></path></svg>Мойка <span style="opacity: 0.55">6</span></button>
 <button type="button" role="tab" class="tab" aria-selected="false" data-tab="water"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"></path></svg>Полив <span style="opacity: 0.55">2</span></button>
 </div>
+<p class="swipe-hint show-m"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15181B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8H3l3-3M3 8l3 3"></path><path d="M16 8h5l-3-3M21 8l-3 3"></path><path d="M10 21v-6.5a1.5 1.5 0 0 1 3 0V17l3.2.5a2 2 0 0 1 1.7 2.3L17.6 21"></path></svg>Листайте вбок — здесь все 8 категорий</p>
+
 
 
 <div data-cat="roads" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -839,6 +853,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
+<button type="button" class="more-btn show-m" data-more>Показать ещё 6 моделей</button>
 </div>
 
 <div data-cat="garbage" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -954,6 +969,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
+<button type="button" class="more-btn show-m" data-more>Показать ещё 1 модель</button>
 </div>
 
 <div data-cat="small" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1104,6 +1120,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
+<button type="button" class="more-btn show-m" data-more>Показать ещё 2 модели</button>
 </div>
 
 <div data-cat="leaves" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1219,6 +1236,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
+<button type="button" class="more-btn show-m" data-more>Показать ещё 1 модель</button>
 </div>
 
 <div data-cat="wash" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1439,6 +1457,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 </article>
 
 </div>
+<button type="button" class="more-btn show-m" data-more>Показать ещё 4 модели</button>
 </div>
 
 <div data-cat="water" style="display: flex; flex-direction: column; gap: 22px; padding-top: 20px">
@@ -1598,9 +1617,9 @@ a{color:#15181B}a:hover{color:#4D545A}
 <figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/specialist.webp" alt="Специалист в каске подбирает технику на планшете" style="display: block; width: 100%; height: 176px; object-fit: cover; object-position: center 25%; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">01 · Подбор техники</figcaption></figure>
 <figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/contract.webp" alt="Рукопожатие при заключении договора" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">03 · Договор</figcaption></figure>
 <figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/factory-line.webp" alt="Рамы шасси на производственной линии завода" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">04 · Производство на заводе</figcaption></figure>
-<figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/delivery.webp" alt="Грузовики на трассе" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">04 · Доставка в Казахстан</figcaption></figure>
+<figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/cs18000-side.webp" alt="Подметально-моечная машина на шасси Dongfeng" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">04 · Доставка в Казахстан</figcaption></figure>
 <figure style="margin: 0; position: relative"><img src="/img/c12-street-wash.webp" alt="Машина BY-C12 моет улицу" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">06 · Запуск и обучение</figcaption></figure>
-<figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/service.webp" alt="Механик ремонтирует технику в мастерской" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">07 · Сервис и запчасти</figcaption></figure>
+<figure style="margin: 0; position: relative"><img loading="lazy" decoding="async" src="/img/hopper-service.webp" alt="Обслуживание машины: поднят бункер" style="display: block; width: 100%; height: 176px; object-fit: cover; border-radius: 16px"><figcaption style="position: absolute; left: 12px; bottom: 12px; padding: 8px 12px; border-radius: 10px; background: rgba(21,24,27,0.88); color: #F2F2EE; font-size: 14px; font-weight: 600">07 · Сервис и запчасти</figcaption></figure>
 </div>
 </div>
 <a href="#lead" data-open-form class="btn btn-y reveal" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 28px; border-radius: 12px; background: #F2C200; color: #15181B; text-decoration: none; font-weight: 700; font-size: 17px">Обсудить задачу <svg class="arr" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
@@ -1806,6 +1825,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 
 </div>
 
+<a href="tel:+77077064669" class="fab show-m" aria-label="Позвонить: +7 707 706 4669"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></a>
 <dialog id="lead" class="lead" aria-labelledby="lead-title">
 <div class="lead-box">
 <button type="button" class="lead-close" data-close aria-label="Закрыть"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
@@ -1818,9 +1838,6 @@ a{color:#15181B}a:hover{color:#4D545A}
 <p class="hp"><label>Не заполняйте это поле <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
 <input type="hidden" name="model" value="">
 <p class="lead-model" hidden style="margin: 0; padding: 12px 14px; border-radius: 10px; background: #F2F2EE; font-size: 15px">Модель: <b></b></p>
-<label>Какая задача?
-<select name="task"><option value="">Выберите задачу</option><option>Уборка дорог</option><option>Тротуары и дворы</option><option>Вывоз мусора</option><option>Сбор листьев</option><option>Мойка</option><option>Полив и пылеподавление</option><option>Пока не знаю</option></select>
-</label>
 <label>Имя
 <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
 </label>
@@ -1871,6 +1888,9 @@ a{color:#15181B}a:hover{color:#4D545A}
       var c = document.getElementById('catalog');
       if (c) c.scrollIntoView({behavior: 'smooth', block: 'start'});
     });
+  });
+  [].slice.call(document.querySelectorAll('[data-more]')).forEach(function(b){
+    b.addEventListener('click', function(){ var c = b.closest('[data-cat]'); if (c) c.classList.add('open'); });
   });
 })();
 </script>

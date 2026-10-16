@@ -301,6 +301,28 @@ a{color:#15181B}a:hover{color:#4D545A}
 .lead-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media (max-width:760px){.lead-box{padding:28px 20px 24px}.lead-2{grid-template-columns:minmax(0,1fr)}}
+
+.show-m{display:none !important}
+.nav-x{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 14px;border-radius:999px;background:rgba(242,194,0,.14);border:1.5px solid rgba(242,194,0,.55);color:#F2C200 !important;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap;transition:background-color .2s ease}
+.nav-x:hover{background:rgba(242,194,0,.26)}
+.fab{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:#F2C200;color:#15181B;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.35);z-index:50}
+.swipe-hint{align-items:center;gap:8px;margin:-4px 0 0;font-size:14px;color:#4D545A}
+.more-btn{min-height:50px;border-radius:10px;border:1.5px solid #15181B;background:transparent;font:inherit;font-size:15px;font-weight:700;color:#15181B;cursor:pointer}
+@media (max-width:760px){
+.show-m{display:flex !important}
+.hero-sub{font-size:15px !important}
+.hero-in{gap:20px !important}
+[data-cat]:not(.open) .card:nth-of-type(n+3){display:none !important}
+[data-cat].open .more-btn{display:none !important}
+}
+
+.draw > *{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.late{opacity:0;animation:fadein .7s ease-out 1.4s forwards}
+@keyframes fadein{to{opacity:1}}
+.show-m-grid{display:none !important}
+@media (max-width:760px){.svg-lbl{display:none}.show-m-grid{display:grid !important}}
+@media (prefers-reduced-motion: reduce){.draw > *{animation:none;stroke-dasharray:none;stroke-dashoffset:0}.late{animation:none;opacity:1}}
 </style>
 </head>
 <body>
@@ -321,9 +343,10 @@ a{color:#15181B}a:hover{color:#4D545A}
 <a href="#parts" style="color: #E4E7EA; text-decoration: none">Запчасти</a>
 <a href="#fleet" style="color: #E4E7EA; text-decoration: none">Для автопарков</a>
 <a href="#faq" style="color: #E4E7EA; text-decoration: none">Вопросы</a>
-<a href="/" style="color: #E4E7EA; text-decoration: none">Техника Baiyi CQ</a>
+<a href="/" class="nav-x">Техника Baiyi CQ <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 </nav>
-<div style="display: flex; align-items: center; gap: 16px; flex: 0 0 auto">
+<div style="display: flex; align-items: center; gap: 12px; flex: 0 0 auto">
+<a href="/" class="nav-x show-m">Техника <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
 <a href="tel:+77077064669" aria-label="Позвонить: +7 707 706 4669" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #F2F2EE; text-decoration: none; font-weight: 600">
 <span style="width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.1); display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span>
 <span class="hide-m">+7 707 706 4669</span></a>
@@ -333,11 +356,11 @@ a{color:#15181B}a:hover{color:#4D545A}
 
 <div class="hero-in" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px 56px; padding: 72px 0 56px">
 <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
-<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgba(242,194,0,0.14); color: #F2C200; font-size: 14px; font-weight: 600">
+<span class="hide-m" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgba(242,194,0,0.14); color: #F2C200; font-size: 14px; font-weight: 600">
 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.7-.3-.3-2.7z"></path></svg>
 Запчасти для китайских грузовиков · Казахстан</span>
-<h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(28px, 2.9vw, 44px); line-height: 1.14; letter-spacing: -0.01em">Запчасти для HOWO, SHACMAN, FAW и SITRAK с доставкой по Казахстану</h1>
-<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #D2D7DB; max-width: 600px">Кузовные детали, расходники и основные агрегаты — двигатели, КПП и мосты. Оригинал или проверенный аналог на выбор. Подберём по VIN и пришлём КП с ценой и наличием.</p>
+<h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: clamp(28px, 2.9vw, 44px); line-height: 1.14; letter-spacing: -0.01em">Запчасти для <span style="color: #F2C200">HOWO, SHACMAN, FAW и SITRAK</span> с доставкой по Казахстану</h1>
+<p class="hero-sub" style="margin: 0; font-size: 17px; line-height: 1.55; color: #C9CED2; max-width: 560px">Кузовные детали, расходники и основные агрегаты — двигатели, КПП и мосты. Оригинал или проверенный аналог на выбор. Подберём по VIN и пришлём КП с ценой и наличием.</p>
 <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
 <a href="#lead" data-open-form class="btn btn-y" style="display: inline-flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 30px; border-radius: 12px; background: #F2C200; color: #15181B; text-decoration: none; font-weight: 700; font-size: 17px">Подобрать запчасть по VIN
 <svg class="arr" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
@@ -346,9 +369,9 @@ a{color:#15181B}a:hover{color:#4D545A}
 </div>
 
 <div class="hero-art" style="flex: 1 1 500px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-<svg viewBox="40 64 580 304" role="img" aria-label="Схема грузовика: кабина, фильтры, двигатель и КПП, мосты" style="display: block; width: 100%; height: auto">
-<g fill="none" stroke="rgba(242,242,238,0.55)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-<path d="M48 324 H612" stroke="rgba(242,242,238,0.25)" stroke-dasharray="2 6"></path>
+<svg viewBox="40 0 580 336" role="img" aria-label="Схема грузовика: запчасти по кабине, фильтры, двигатель и КПП, мосты" style="display: block; width: 100%; height: auto">
+<path d="M48 324 H612" fill="none" stroke="rgba(242,242,238,0.25)" stroke-dasharray="2 6"></path>
+<g class="draw" fill="none" stroke="rgba(242,242,238,0.55)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
 <rect x="118" y="246" width="478" height="12" rx="2"></rect>
 <rect x="268" y="262" width="60" height="26" rx="6"></rect>
 <path d="M282 264 V286 M314 264 V286" stroke-opacity="0.5"></path>
@@ -378,9 +401,8 @@ a{color:#15181B}a:hover{color:#4D545A}
 <circle cx="430" cy="288" r="20"></circle>
 <circle cx="508" cy="288" r="20"></circle>
 <circle cx="150" cy="288" r="5"></circle>
-<path d="M86 344 V356 M590 344 V356 M86 350 H590" stroke="rgba(242,242,238,0.25)"></path>
 </g>
-<g fill="none" stroke="#F2C200" stroke-width="1.75" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round">
+<g class="late" fill="none" stroke="#F2C200" stroke-width="1.75" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round">
 <rect x="158" y="198" width="56" height="44" rx="4" fill="#F2C200" fill-opacity="0.08"></rect>
 <rect x="164" y="188" width="44" height="10" rx="2"></rect>
 <rect x="140" y="200" width="12" height="22" rx="3" fill="#F2C200" fill-opacity="0.08"></rect>
@@ -390,7 +412,25 @@ a{color:#15181B}a:hover{color:#4D545A}
 <circle cx="508" cy="288" r="12"></circle>
 <path d="M442 288 H496"></path>
 </g>
-<g font-family="Unbounded, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+<g class="svg-lbl late">
+<path d="M127.0 36 L146 173" stroke="#15181B" stroke-width="4" fill="none"></path>
+<path d="M127.0 36 L146 173" stroke="#F2C200" stroke-width="1.25" fill="none"></path>
+<path d="M289.0 36 L179.4 95.8" stroke="#15181B" stroke-width="4" fill="none"></path>
+<path d="M289.0 36 L179.4 95.8" stroke="#F2C200" stroke-width="1.25" fill="none"></path>
+<path d="M429.0 36 L200.2 214" stroke="#15181B" stroke-width="4" fill="none"></path>
+<path d="M429.0 36 L200.2 214" stroke="#F2C200" stroke-width="1.25" fill="none"></path>
+<path d="M529.0 36 L472 275.4" stroke="#15181B" stroke-width="4" fill="none"></path>
+<path d="M529.0 36 L472 275.4" stroke="#F2C200" stroke-width="1.25" fill="none"></path>
+<rect x="44" y="10" width="166" height="26" rx="13" fill="#1D2125" stroke="#F2C200" stroke-opacity="0.6"></rect>
+<text x="127.0" y="27.5" text-anchor="middle" font-family="Onest, sans-serif" font-size="13" font-weight="600" fill="#F2F2EE">Фильтры, масла, ремни</text>
+<rect x="218" y="10" width="142" height="26" rx="13" fill="#1D2125" stroke="#F2C200" stroke-opacity="0.6"></rect>
+<text x="289.0" y="27.5" text-anchor="middle" font-family="Onest, sans-serif" font-size="13" font-weight="600" fill="#F2F2EE">Запчасти по кабине</text>
+<rect x="368" y="10" width="122" height="26" rx="13" fill="#1D2125" stroke="#F2C200" stroke-opacity="0.6"></rect>
+<text x="429.0" y="27.5" text-anchor="middle" font-family="Onest, sans-serif" font-size="13" font-weight="600" fill="#F2F2EE">Двигатель и КПП</text>
+<rect x="498" y="10" width="62" height="26" rx="13" fill="#1D2125" stroke="#F2C200" stroke-opacity="0.6"></rect>
+<text x="529.0" y="27.5" text-anchor="middle" font-family="Onest, sans-serif" font-size="13" font-weight="600" fill="#F2F2EE">Мосты</text>
+</g>
+<g class="late" font-family="Unbounded, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
 <circle class="pulse" cx="168" cy="102" r="13" fill="none" stroke="#F2C200" stroke-width="2"></circle>
 <circle cx="168" cy="102" r="13" fill="#F2C200"></circle>
 <text x="168" y="106" fill="#15181B">01</text>
@@ -405,8 +445,8 @@ a{color:#15181B}a:hover{color:#4D545A}
 <text x="469" y="292" fill="#15181B">04</text>
 </g>
 </svg>
-<ul class="legend4" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px">
-<li style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: #D2D7DB"><span style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px; background: #F2C200; color: #15181B; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px">01</span>Кабина и оперение</li>
+<ul class="legend4 show-m-grid" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px">
+<li style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: #D2D7DB"><span style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px; background: #F2C200; color: #15181B; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px">01</span>Запчасти по кабине</li>
 <li style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: #D2D7DB"><span style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px; background: #F2C200; color: #15181B; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px">02</span>Фильтры, масла, ремни</li>
 <li style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: #D2D7DB"><span style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px; background: #F2C200; color: #15181B; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px">03</span>Двигатель и КПП</li>
 <li style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: #D2D7DB"><span style="flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px; background: #F2C200; color: #15181B; display: flex; align-items: center; justify-content: center; font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px">04</span>Мосты</li>
@@ -867,6 +907,7 @@ a{color:#15181B}a:hover{color:#4D545A}
 
 </div>
 
+<a href="tel:+77077064669" class="fab show-m" aria-label="Позвонить: +7 707 706 4669"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></a>
 <dialog id="lead" class="lead" aria-labelledby="lead-title">
 <div class="lead-box">
 <button type="button" class="lead-close" data-close aria-label="Закрыть"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></button>
@@ -877,17 +918,6 @@ a{color:#15181B}a:hover{color:#4D545A}
 <form name="zapchasti" method="POST" action="/zapchasti/spasibo/" data-netlify="true" netlify-honeypot="company_site">
 <input type="hidden" name="form-name" value="zapchasti">
 <p class="hp"><label>Не заполняйте это поле <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
-<div class="lead-2">
-<label>Марка
-<select name="brand"><option value="">Выберите марку</option><option>HOWO</option><option>SINOTRUK</option><option>SHACMAN</option><option>FAW</option><option>SITRAK</option><option>Другая</option></select>
-</label>
-<label>Что нужно
-<select name="need"><option value="">Выберите</option><option>Кузовные запчасти</option><option>Расходники</option><option>Двигатель / КПП / мост</option><option>Не знаю — нужна консультация</option></select>
-</label>
-</div>
-<label>VIN или номер детали <span style="font-weight: 400; color: #5C6369">необязательно</span>
-<input type="text" name="vin" placeholder="17 символов VIN или номер детали" autocomplete="off">
-</label>
 <label>Имя
 <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
 </label>
