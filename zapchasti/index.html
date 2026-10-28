@@ -367,8 +367,24 @@ a{color:#15181B}a:hover{color:#4D545A}
 .brand-name{font-size:17px}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1668375668416836');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1668375668416836&ev=PageView&noscript=1" alt=""></noscript>
+
 <div style="font-family: 'Onest', system-ui, sans-serif; color: #15181B; background: #F2F2EE; font-size: 17px; line-height: 1.5; overflow-x: hidden">
 
 <!-- ПЕРВЫЙ ЭКРАН -->
@@ -994,6 +1010,13 @@ a{color:#15181B}a:hover{color:#4D545A}
   window.addEventListener('resize', fitScheme);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitScheme);
 })();
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href^="https://wa.me"], a[href^="tel:"]');
+  if (!a || typeof fbq !== 'function') return;
+  fbq('track', 'Contact', {content_category: 'zapchasti', content_name: a.href.indexOf('tel:') === 0 ? 'phone' : 'whatsapp'});
+});
 </script>
 </body>
 </html>
